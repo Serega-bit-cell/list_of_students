@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <h1>Панель управления студентами</h1>
+
+    <div id="studentForm">
+        <h2>Добавить студента</h2>
+        <form id="add-student-form">
+            <label for="firstName">Имя:</label>
+            <input type="text" id="firstName" name="firstName">
+            <div class="error-message" id="firstNameError"></div>
+        
+            <label for="lastName">Фамилия:</label>
+            <input type="text" id="lastName" name="lastName">
+            <div class="error-message" id="lastNameError"></div>
+        
+            <label for="middleName">Отчество:</label>
+            <input type="text" id="middleName" name="middleName">
+            <div class="error-message" id="middleNameError"></div>
+        
+            <label for="birthDate">Дата рождения:</label>
+            <input type="date" id="birthDate" name="birthDate">
+            <div class="error-message" id="birthDateError"></div>
+        
+            <label for="startYear">Год начала обучения:</label>
+            <input type="number" id="startYear" name="startYear">
+            <div class="error-message" id="startYearError"></div>
+        
+            <label for="faculty">Факультет:</label>
+            <input type="text" id="faculty" name="faculty">
+            <div class="error-message" id="facultyError"></div>
+        
+            <button type="submit">Добавить студента</button>
+        </form>
+        <div id="error-messages"></div>
+    </div>
+
+    <h2>Фильтры</h2>
+    <div id="filterFields">
+        <input type="text" id="filterFullName" placeholder="ФИО">
+        <input type="text" id="filterFaculty" placeholder="Факультет">
+        <input type="text" id="filterStartYear" placeholder="Год начала">
+        <input type="text" id="filterEndYear" placeholder="Год окончания">
+        <button id="filterButton">Фильтровать</button>
+        <button id="resetFilterButton">Сбросить фильтры</button>
+    </div>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th id="headerFio">Ф. И. О.</th>
+                <th id="headerFaculty">Факультет</th>
+                <th id="headerBirth">Дата рождения и возраст</th>
+                <th id="headerYears">Годы обучения</th>
+            </tr>
+        </thead>
+        <tbody id="studentsBody"></tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+
+</html>
